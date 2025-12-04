@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz EAP 2024 - 3º Sargento BM Combatente</title>
+    <title>Quiz EAP 2024 - 3º Sargento QPBM</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -345,6 +345,11 @@
             border-left: 5px solid var(--primary);
         }
 
+        .question.annulled {
+            border-left: 5px solid var(--warning);
+            background: #fff9e6;
+        }
+
         .question-header {
             display: flex;
             flex-direction: column;
@@ -364,12 +369,27 @@
         .difficulty-easy { background: var(--success); }
         .difficulty-medium { background: var(--warning); }
         .difficulty-hard { background: var(--danger); }
+        .difficulty-annulled { background: var(--gray); }
 
         .question-text {
             font-size: 1.2rem;
             font-weight: 600;
             color: var(--primary);
             line-height: 1.4;
+        }
+
+        .question.annulled .question-text {
+            color: var(--warning);
+        }
+
+        .annulled-badge {
+            background: var(--warning);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            align-self: flex-start;
         }
 
         .options {
@@ -710,13 +730,13 @@
                     </div>
                     <div class="logo-text">
                         <h1>Quiz EAP 2024</h1>
-                        <div class="subtitle">3º Sargento BM Combatente</div>
+                        <div class="subtitle">3º Sargento QPBM</div>
                     </div>
                 </div>
 
                 <div class="welcome-card">
                     <h2><i class="fas fa-fire"></i> Bem-vindo ao Quiz EAP 2024!</h2>
-                    <p>Teste seus conhecimentos para o Exame de Aptidão Profissional do Corpo de Bombeiros Militar de Minas Gerais com 40 questões baseadas no conteúdo oficial.</p>
+                    <p>Teste seus conhecimentos para o Exame de Aptidão Profissional do Corpo de Bombeiros Militar de Minas Gerais com 40 questões baseadas no conteúdo oficial da prova.</p>
                 </div>
 
                 <div class="cta-section">
@@ -727,11 +747,11 @@
                     <div class="features">
                         <div class="feature">
                             <i class="fas fa-star" style="color: #4cc9f0;"></i>
-                            <span>40 Perguntas</span>
+                            <span>40 Perguntas Oficiais</span>
                         </div>
                         <div class="feature">
                             <i class="fas fa-check-circle" style="color: #f8961e;"></i>
-                            <span>Feedback Imediato</span>
+                            <span>Gabarito Oficial</span>
                         </div>
                         <div class="feature">
                             <i class="fas fa-graduation-cap" style="color: #f94144;"></i>
@@ -747,7 +767,7 @@
             <div class="about-card">
                 <h2 class="card-title"><i class="fas fa-info-circle"></i> Sobre o EAP 2024</h2>
                 <div class="card-content">
-                    <p>O Exame de Aptidão Profissional (EAP) 2024 é destinado aos militares do Corpo de Bombeiros Militar de Minas Gerais (CBMMG) que buscam progressão para a graduação de 3º Sargento BM Combatente.</p>
+                    <p>O Exame de Aptidão Profissional (EAP) 2024 é destinado aos militares do Corpo de Bombeiros Militar de Minas Gerais (CBMMG) que buscam progressão para a graduação de 3º Sargento QPBM.</p>
                     <p>A prova contém 40 questões objetivas distribuídas em três áreas de conhecimento: Legislação Institucional, Conhecimentos Jurídicos e Conhecimentos Profissionais.</p>
                     <p><span class="highlight">Duração: 4 horas</span> - Prova com consulta ao material individual do candidato.</p>
                 </div>
@@ -761,7 +781,7 @@
                         <li><i class="fas fa-check"></i> <strong>Conhecimentos Jurídicos:</strong> Questões 13 a 24</li>
                         <li><i class="fas fa-check"></i> <strong>Conhecimentos Profissionais:</strong> Questões 25 a 40</li>
                         <li><i class="fas fa-check"></i> <strong>Total:</strong> 40 questões objetivas</li>
-                        <li><i class="fas fa-check"></i> <strong>Material:</strong> Prova com consulta permitida</li>
+                        <li><i class="fas fa-check"></i> <strong>Questões Anuladas:</strong> 11 e 40</li>
                     </ul>
                 </div>
             </div>
@@ -839,7 +859,7 @@
                     "Os municípios elegíveis para instalação de Brigadas Municipais foram ranqueados sem utilização de um método."
                 ],
                 correct: 0,
-                explanation: "A alternativa correta é a primeira, pois de acordo com a 5ª edição do Plano de Comando do CBMMG, a instalação de Brigadas Municipais é uma forma de expansão do atendimento em municípios com até 30 mil habitantes.",
+                explanation: "A alternativa A está correta conforme o Plano de Comando do CBMMG 2015-2026.",
                 difficulty: "medium",
                 category: "Legislação"
             },
@@ -853,7 +873,7 @@
                     "Ensino, Treinamento e Desenvolvimento é um macroprocesso finalístico do CBMMG."
                 ],
                 correct: 3,
-                explanation: "A alternativa incorreta é a quarta, pois Ensino, Treinamento e Desenvolvimento é um macroprocesso suporte, não finalístico, conforme a 5ª edição do Plano de Comando do CBMMG.",
+                explanation: "A alternativa D está incorreta, pois Ensino, Treinamento e Desenvolvimento é um macroprocesso suporte, não finalístico.",
                 difficulty: "medium",
                 category: "Legislação"
             },
@@ -867,7 +887,7 @@
                     "O Sistema de Medição de Desempenho do CBMMG traz importantes avanços ao gerenciamento institucional na busca por um atendimento cada vez mais eficiente ao cidadão mineiro."
                 ],
                 correct: 1,
-                explanation: "A alternativa incorreta é a segunda, pois os índices estratégicos não foram criados apenas para acompanhar atividades rotineiras, mas sim para monitorar o progresso em relação aos objetivos estratégicos do CBMMG.",
+                explanation: "A alternativa B está incorreta conforme o Sistema de Medição de Desempenho do CBMMG.",
                 difficulty: "medium",
                 category: "Legislação"
             },
@@ -881,13 +901,13 @@
                     "A menção elogiosa verbal deverá ser concedida o mais próximo possível da ação ou atuação merecedora da recompensa, considerando, em especial, o princípio da oportunidade."
                 ],
                 correct: 3,
-                explanation: "A alternativa correta é a quarta, pois a menção elogiosa verbal deve ser concedida o mais próximo possível da ação merecedora, considerando o princípio da oportunidade, conforme estabelecido na legislação.",
+                explanation: "A alternativa D está correta conforme as normas sobre concessão de recompensas.",
                 difficulty: "medium",
                 category: "Legislação"
             },
             {
                 id: 5,
-                question: "Sobre os princípios que devem ser observados para a concessão de recompensas, conforme Decreto nº 42.843/2002, marque a alternativa que contém apenas as afirmativas CORRETAS:",
+                question: "Sobre os princípios que devem ser observados para a concessão de recompensas, conforme Decreto nº 42.843/2002, marque a alternativa que contém apenas as afirmativas CORRETAS: Afirmativa I - proporcionalidade: a recompensa será proporcional ao fato gerador... Afirmativa II - merecimento: cada militar a ser recompensado deverá receber o prêmio na exata medida da sua participação... Afirmativa III - oportunidade: a recompensa será concedida no momento certo... Afirmativa IV - individualidade: a concessão de recompensa será precedida de análise acurada... Afirmativa V - justiça: os comandantes, nos diversos níveis, deverão manter um acompanhamento permanente...",
                 options: [
                     "I, III e V.",
                     "I e III.",
@@ -895,7 +915,7 @@
                     "I e V."
                 ],
                 correct: 0,
-                explanation: "A alternativa correta é a primeira, pois as afirmativas I, III e V estão corretas de acordo com o Decreto nº 42.843/2002 que trata dos princípios para concessão de recompensas.",
+                explanation: "As afirmativas I, III e V estão corretas conforme o Decreto nº 42.843/2002.",
                 difficulty: "hard",
                 category: "Legislação"
             },
@@ -903,13 +923,13 @@
                 id: 6,
                 question: "A continência individual é a forma de saudação que o militar isolado, em serviço ativo ou na inatividade, deve aos símbolos, às autoridades, à tropa formada e a outros militares. Quando em trajes civis, o militar em serviço ativo ou na inatividade deve assumir as seguintes atitudes.",
                 options: [
-                    "Permanecer em posição de sentido e levar a mão direita à cabeça.",
-                    "Permanecer em posição de descanso e levar a mão direita à cabeça.",
-                    "Permanecer em posição de sentido e fazer uma leve inclinação de cabeça.",
-                    "Permanecer em posição de descanso e fazer uma leve inclinação de cabeça."
+                    "Alternativa A",
+                    "Alternativa B", 
+                    "Alternativa C",
+                    "Alternativa D"
                 ],
                 correct: 3,
-                explanation: "A alternativa correta é a quarta, pois quando em trajes civis, o militar deve permanecer em posição de descanso e fazer uma leve inclinação de cabeça como forma de continência.",
+                explanation: "A alternativa D está correta conforme as normas de continência.",
                 difficulty: "easy",
                 category: "Legislação"
             },
@@ -923,7 +943,7 @@
                     "O militar poderá afastar-se do exercício de seu cargo ou função, a partir da data do encerramento de todo o processo de transferência para a reserva."
                 ],
                 correct: 3,
-                explanation: "A alternativa incorreta é a quarta, pois o militar não pode afastar-se do exercício de seu cargo ou função antes da conclusão de todo o processo de transferência para a reserva.",
+                explanation: "A alternativa D está incorreta conforme as normas de contagem de tempo de serviço.",
                 difficulty: "hard",
                 category: "Legislação"
             },
@@ -937,7 +957,7 @@
                     "Exercer a supervisão das atividades dos órgãos e das entidades civis que atuam em sua área de competência."
                 ],
                 correct: 2,
-                explanation: "A alternativa incorreta é a terceira, pois não compete ao CBMMG evitar a criação de Bombeiros não militares, mas sim supervisionar suas atividades quando existirem.",
+                explanation: "A alternativa C está incorreta, pois não compete ao CBMMG evitar a criação de Bombeiros não militares.",
                 difficulty: "medium",
                 category: "Legislação"
             },
@@ -951,7 +971,7 @@
                     "A administração, o comando e o emprego da Corporação são de competência e responsabilidade dos Oficiais Superiores."
                 ],
                 correct: 3,
-                explanation: "A alternativa incorreta é a quarta, pois a administração, comando e emprego da Corporação não são competência exclusiva dos Oficiais Superiores, mas de todos os oficiais conforme sua hierarquia.",
+                explanation: "A alternativa D está incorreta, pois a administração, comando e emprego da Corporação não são competência exclusiva dos Oficiais Superiores.",
                 difficulty: "medium",
                 category: "Legislação"
             },
@@ -965,7 +985,7 @@
                     "No caso de militares cônjuges, sendo um dos militares movimentado por necessidade do serviço, o consorte poderá ser movimentado, se oportuno e conveniente, para a mesma localidade, somente por interesse próprio."
                 ],
                 correct: 2,
-                explanation: "A alternativa correta é a terceira, pois são vedadas as movimentações quando inexistir claro no efetivo da Unidade ou Fração de destino, exceto no caso de permuta.",
+                explanation: "A alternativa C está correta conforme as normas de movimentação de militares.",
                 difficulty: "medium",
                 category: "Legislação"
             },
@@ -978,10 +998,11 @@
                     "A Honra fúnebre é uma honra militar prestada através da Comissão de Cumprimentos e de Pêsames.",
                     "A Bandeira Nacional, em Organização Militar, deverá ser hasteada no mastro principal às oito horas e a ter sua arriação às dezoito horas ou ao pôr-do-sol."
                 ],
-                correct: 3,
-                explanation: "A alternativa correta é a quarta, pois a Bandeira Nacional em Organização Militar deve ser hasteada às oito horas e arriada às dezoito horas ou ao pôr-do-sol, conforme regulamentação.",
-                difficulty: "medium",
-                category: "Legislação"
+                correct: null, // QUESTÃO ANULADA
+                explanation: "Esta questão foi anulada no gabarito oficial.",
+                difficulty: "annulled",
+                category: "Legislação",
+                annulled: true
             },
             {
                 id: 12,
@@ -993,7 +1014,7 @@
                     "9 pontos."
                 ],
                 correct: 3,
-                explanation: "A alternativa correta é a quarta, pois o cálculo da pontuação considerando os afastamentos descritos resulta em 9 pontos, conforme a Resolução CBMMG nº 808/2018.",
+                explanation: "A alternativa D está correta, resultando em 9 pontos conforme cálculo baseado na Resolução CBMMG nº 808/2018.",
                 difficulty: "hard",
                 category: "Legislação"
             },
@@ -1008,7 +1029,7 @@
                     "Os nascidos na República Federativa do Brasil, ainda que de pais estrangeiros, desde que estes não estejam a serviço de seu país."
                 ],
                 correct: 2,
-                explanation: "A alternativa incorreta é a terceira, pois estrangeiros que residem no Brasil há mais de 15 anos e requerem nacionalidade são brasileiros naturalizados, não natos.",
+                explanation: "A alternativa C descreve brasileiros naturalizados, não natos.",
                 difficulty: "medium",
                 category: "Jurídico"
             },
@@ -1022,13 +1043,13 @@
                     "Sistema Nacional do Meio Ambiente."
                 ],
                 correct: 1,
-                explanation: "A alternativa incorreta é a segunda, pois as polícias militares e corpos de bombeiros militares não integram o Sistema Nacional de Recursos Minerais, conforme a Lei Federal nº 14.751/2023.",
-                difficulty: "medium",
+                explanation: "As polícias militares e corpos de bombeiros militares não integram o Sistema Nacional de Recursos Minerais.",
+                difficulty: "easy",
                 category: "Jurídico"
             },
             {
                 id: 15,
-                question: "A Sargento Amaranta foi designada como instrutora no TPB de sua Unidade. Para o primeiro dia de instrução, a Sargento condensou dispositivos que abordam a Administração Pública no Estado. Para auxiliar a militar, avalie as afirmativas a seguir no contexto da Constituição do Estado de Minas Gerais e assinale a alternativa CORRETA:",
+                question: "A Sargento Amaranta foi designada como instrutora no TPB de sua Unidade. Para o primeiro dia de instrução, a Sargento condensou dispositivos que abordam a Administração Pública no Estado. Para auxiliar a militar, avalie as afirmativas a seguir no contexto da Constituição do Estado de Minas Gerais e assinale a alternativa CORRETA: Afirmativa I: As pessoas jurídicas de direito público e as de direito privado prestadoras de serviços públicos responderão pelos danos que seus agentes, nessa qualidade, causarem a terceiros... Afirmativa II: A atividade de administração pública dos Poderes do Estado e a de entidade descentralizada se sujeitarão aos princípios de legalidade, impessoalidade, moralidade, publicidade, eficiência, razoabilidade e sustentabilidade. Afirmativa III: Administração pública direta é a que compete à autarquia, à sociedade de economia mista, à empresa pública, à fundação pública, e às demais entidades de direito privado... Afirmativa IV: Administração pública indireta é a que compete a órgão de qualquer dos Poderes do Estado.",
                 options: [
                     "Apenas as afirmativas I e II são verdadeiras.",
                     "Apenas a afirmativa I é verdadeira.",
@@ -1036,7 +1057,7 @@
                     "Todas as afirmativas são verdadeiras."
                 ],
                 correct: 0,
-                explanation: "A alternativa correta é a primeira, pois apenas as afirmativas I e II estão corretas de acordo com a Constituição do Estado de Minas Gerais.",
+                explanation: "Apenas as afirmativas I e II estão corretas conforme a Constituição do Estado de Minas Gerais.",
                 difficulty: "hard",
                 category: "Jurídico"
             },
@@ -1050,7 +1071,7 @@
                     "O bombeiro militar da reserva, independentemente de sua unidade federativa, não necessitará realizar curso nos centros de formação para exercer atividades na área de competência do CBMMG."
                 ],
                 correct: 3,
-                explanation: "A alternativa correta é a quarta, pois de acordo com a Lei Estadual nº 22.839/2018, o bombeiro militar da reserva não precisa realizar curso nos centros de formação para exercer atividades na área de competência do CBMMG.",
+                explanation: "A alternativa D está correta conforme a Lei Estadual nº 22.839/2018.",
                 difficulty: "medium",
                 category: "Jurídico"
             },
@@ -1064,13 +1085,13 @@
                     "Na aquisição de materiais, de equipamentos ou de gêneros ou contratação de serviços que só possam ser fornecidos por produtor, empresa ou representante comercial exclusivos quando inviável a competição."
                 ],
                 correct: 3,
-                explanation: "A alternativa correta é a quarta, pois a inexigibilidade de licitação é permitida quando o objeto só pode ser fornecido por produtor, empresa ou representante comercial exclusivo, conforme a Lei Federal nº 14.133/2021.",
-                difficulty: "medium",
+                explanation: "A alternativa D está correta conforme a Lei Federal nº 14.133/2021 sobre inexigibilidade de licitação.",
+                difficulty: "hard",
                 category: "Jurídico"
             },
             {
                 id: 18,
-                question: "Durante o final de semana, o Tenente Buendia foi acionado como plantão de sobreaviso em razão de um possível cometimento de crime militar por um Cabo de sua Unidade. Ao se preparar para o deslocamento, o Tenente aproveitou para revisar algumas medidas a serem observadas na legislação que aborda o assunto. Avalie as afirmativas a seguir no contexto das medidas que a autoridade deverá tomar, se possível, logo que tiver conhecimento da prática de infração penal militar, e assinale a alternativa CORRETA.",
+                question: "Durante o final de semana, o Tenente Buendia foi acionado como plantão de sobreaviso em razão de um possível cometimento de crime militar por um Cabo de sua Unidade. Ao se preparar para o deslocamento, o Tenente aproveitou para revisar algumas medidas a serem observadas na legislação que aborda o assunto. Avalie as afirmativas a seguir no contexto das medidas que a autoridade deverá tomar, se possível, logo que tiver conhecimento da prática de infração penal militar, e assinale a alternativa CORRETA. Afirmativa I: Dirigir-se ao local, providenciando para que se não alterem o estado e a situação das coisas, enquanto necessário. Afirmativa II: Apreender os instrumentos e todos os objetos que tenham relação com o fato. Afirmativa III: Efetuar a prisão do infrator, observado o disposto no art. 244 do CPPM. Afirmativa IV: Colher todas as provas que sirvam para o esclarecimento do fato e suas circunstâncias.",
                 options: [
                     "Apenas as afirmativas I, II e IV são verdadeiras.",
                     "Apenas as afirmativas I, III e IV são verdadeiras.",
@@ -1078,7 +1099,7 @@
                     "Todas as afirmativas são verdadeiras."
                 ],
                 correct: 3,
-                explanation: "A alternativa correta é a quarta, pois todas as afirmativas estão corretas de acordo com as medidas que a autoridade deve tomar ao ter conhecimento da prática de infração penal militar.",
+                explanation: "Todas as afirmativas estão corretas conforme as medidas a serem tomadas em caso de infração penal militar.",
                 difficulty: "medium",
                 category: "Jurídico"
             },
@@ -1092,7 +1113,7 @@
                     "Dignidade da pessoa humana."
                 ],
                 correct: 0,
-                explanation: "A alternativa incorreta é a primeira, pois a legalidade é um princípio da administração pública, não um princípio fundamental expresso na Constituição Federal.",
+                explanation: "Legalidade é princípio da administração pública, não princípio fundamental da República.",
                 difficulty: "easy",
                 category: "Jurídico"
             },
@@ -1106,7 +1127,7 @@
                     "Durante uma instrução processual, divulgar gravação ou trecho de gravação sem relação com a prova que se pretenda produzir, expondo a intimidade ou a vida privada ou ferindo a honra ou a imagem do investigado ou acusado."
                 ],
                 correct: 3,
-                explanation: "A alternativa correta é a quarta, pois divulgar gravação sem relação com a prova que se pretenda produzir, expondo a intimidade ou vida privada, constitui crime de abuso de autoridade conforme a Lei Federal nº 13.869/2019.",
+                explanation: "A alternativa D configura crime de abuso de autoridade conforme a Lei Federal nº 13.869/2019.",
                 difficulty: "medium",
                 category: "Jurídico"
             },
@@ -1120,8 +1141,8 @@
                     "Realizar operação financeira sem observância das normas legais e regulamentares."
                 ],
                 correct: 2,
-                explanation: "A alternativa correta é a terceira, pois receber vantagem econômica para omitir ato de ofício configura ato de improbidade relacionado ao enriquecimento ilícito, conforme a Lei nº 8.429/1992.",
-                difficulty: "medium",
+                explanation: "A alternativa C descreve corretamente ato de improbidade relacionado ao enriquecimento ilícito.",
+                difficulty: "hard",
                 category: "Jurídico"
             },
             {
@@ -1129,12 +1150,12 @@
                 question: "Está previsto na Lei Federal nº 13.425/2017, que estabelece diretrizes gerais sobre medidas de prevenção e combate a incêndio e a desastres em estabelecimentos, EXCETO:",
                 options: [
                     "A realização de vistorias periódicas nos estabelecimentos comerciais e de serviços e nos edifícios residenciais multifamiliares pelo poder público municipal e pelo Corpo de Bombeiros Militar.",
-                    "Observar normas especiais de prevenção e combate a incêndio e a desastres para locais de grande concentração e circulação de pessoas.",
+                    "observar normas especiais de prevenção e combate a incêndio e a desastres para locais de grande concentração e circulação de pessoas.",
                     "A obrigatoriedade de curso específico voltado para a prevenção e combate a incêndio para oficiais e praças integrantes dos setores técnicos e de fiscalização dos Corpos de Bombeiros Militares.",
                     "A isenção de exigência de medidas de prevenção e combate a incêndio em imóveis públicos ocupados pelo poder público estadual."
                 ],
                 correct: 3,
-                explanation: "A alternativa incorreta é a quarta, pois a Lei Federal nº 13.425/2017 não prevê isenção de exigência de medidas de prevenção e combate a incêndio em imóveis públicos ocupados pelo poder público estadual.",
+                explanation: "A alternativa D está incorreta, pois não há isenção para imóveis públicos estaduais.",
                 difficulty: "medium",
                 category: "Jurídico"
             },
@@ -1148,8 +1169,8 @@
                     "Cassação do credenciamento."
                 ],
                 correct: 0,
-                explanation: "A alternativa incorreta é a primeira, pois a advertência verbal não é uma sanção administrativa prevista na Lei Estadual nº 22.839/2018 para quem contrata profissionais não credenciados.",
-                difficulty: "medium",
+                explanation: "Advertência verbal não é sanção prevista na Lei Estadual nº 22.839/2018.",
+                difficulty: "easy",
                 category: "Jurídico"
             },
             {
@@ -1162,7 +1183,7 @@
                     "Na aplicação de sanções, serão consideradas a natureza e a gravidade da infração cometida, os danos que dela provierem para a administração pública, as circunstâncias agravantes ou atenuantes e os antecedentes do agente."
                 ],
                 correct: 2,
-                explanation: "A alternativa incorreta é a terceira, pois coisa julgada ou caso julgado é a decisão judicial da qual não cabe mais recurso, não aquela que ainda admite recurso.",
+                explanation: "A alternativa C está incorreta, pois coisa julgada é decisão judicial contra a qual não cabe mais recurso.",
                 difficulty: "medium",
                 category: "Jurídico"
             },
@@ -1177,13 +1198,13 @@
                     "Vulnerabilidade - situação das pessoas, infraestrutura, habitação, capacidade de produção e outros ativos humanos tangíveis que estão localizados em áreas sujeitas à perigos."
                 ],
                 correct: 1,
-                explanation: "A alternativa correta é a segunda, pois a definição de ameaça como evento em potencial com possibilidade de causar danos está de acordo com a ITO 33.",
+                explanation: "A alternativa B está correta conforme a definição de ameaça na ITO 33.",
                 difficulty: "medium",
                 category: "Profissional"
             },
             {
                 id: 26,
-                question: "Em relação as Ações de Defesa Civil desenvolvidas pelo CBMMG conforme a ITO 33, complete as lacunas e assinale a alternativa CORRETA: I – Dentre as ações de ______ do CBMMG, compreendem a realização de vistorias nas áreas de risco, providenciando a evacuação dos moradores em caso de necessidade e o levantamento dos afetados pelo desastre, identificando as necessidades de materiais de assistência humanitária. II – Dentre as ações de ______, o mapeamento das áreas de risco é ferramenta essencial para o desempenho local das ações de proteção e defesa civil e por isso deve ser alvo das Unidades de Execução Operacional do CBMMG. III – Os simulados e treinamentos fazem parte das ações de ______ e possibilitam a capacitação dos Bombeiros Militares e demais agentes de Proteção e Defesa Civil para atuação em comunidades vulneráveis e COMPDECs. IV – Em relação as ações de ______, podem ser adotadas medidas estruturais como noticiar a Prefeitura Municipal e demais agentes de Defesa Civil sobre os locais que necessitam de intervenção com obras de engenharia.",
+                question: "Em relação as Ações de Defesa Civil desenvolvidas pelo CBMMG conforme a ITO 33, complete as lacunas e assinale a alternativa CORRETA: I – Dentre as ações de ______ do CBMMG, compreendem a realização de vistorias nas áreas de risco... II – Dentre as ações de ______, o mapeamento das áreas de risco é ferramenta essencial... III – Os simulados e treinamentos fazem parte das ações de ______ e possibilitam a capacitação... IV – Em relação as ações de ______, podem ser adotadas medidas estruturais...",
                 options: [
                     "Preparação; mitigação, prevenção; resposta.",
                     "Resposta; prevenção; preparação; mitigação.",
@@ -1191,13 +1212,13 @@
                     "Resposta; mitigação; prevenção; reconstrução."
                 ],
                 correct: 1,
-                explanation: "A alternativa correta é a segunda, pois a sequência correta é: Resposta; prevenção; preparação; mitigação, conforme estabelecido na ITO 33.",
+                explanation: "A sequência correta é: Resposta; prevenção; preparação; mitigação.",
                 difficulty: "hard",
                 category: "Profissional"
             },
             {
                 id: 27,
-                question: "De acordo com a ITO 23, avalie as assertivas e assinale a alternativa CORRETA:",
+                question: "De acordo com a ITO 23, avalie as assertivas e assinale a alternativa CORRETA: Afirmativa I – Em caso de amputação parcial de um membro, essa não deve ser completada em hipótese alguma. Afirmativa II – Durante a avaliação da pelve de um paciente, caso seja percebida alguma alteração em alguma das palpações, nova avaliação deve ser executada antes da decisão de condução para unidade hospitalar. Afirmativa III – A observação do posicionamento corporal do paciente pode fornecer sinais para a equipe de atendimento, a saber: nível de consciência, dificuldade respiratória e sinais de dor. Afirmativa IV – O procedimento de RCP em um paciente adulto com via aérea avançada, consiste na realização de 2 (duas) ventilações ao término de um ciclo de 30 (trinta) compressões.",
                 options: [
                     "I e II estão corretas.",
                     "I e III estão corretas.",
@@ -1205,8 +1226,8 @@
                     "I, III e IV estão corretas."
                 ],
                 correct: 1,
-                explanation: "A alternativa correta é a segunda, pois as afirmativas I e III estão corretas de acordo com a ITO 23.",
-                difficulty: "medium",
+                explanation: "As afirmativas I e III estão corretas conforme a ITO 23.",
+                difficulty: "hard",
                 category: "Profissional"
             },
             {
@@ -1219,7 +1240,7 @@
                     "Para a realização de uma RCP eficiente, devem ser observados os parâmetros de frequência de 100 (cem) a 120 (cento e vinte) compressões por minuto, e profundidade de 3 cm em lactentes, 4 cm em crianças e 5 cm em adultos."
                 ],
                 correct: 2,
-                explanation: "A alternativa correta é a terceira, pois o manuseio inadequado de extremidade lesada pode converter fratura fechada em aberta e aumentar sangramento, sendo a imobilização fundamental, conforme a ITO 23.",
+                explanation: "A alternativa C está correta conforme a ITO 23.",
                 difficulty: "medium",
                 category: "Profissional"
             },
@@ -1233,7 +1254,7 @@
                     "Durante a aplicação da ventilação por pressão positiva (VPP) mecânica, manter abertas as portas, janelas ou qualquer outra passagem existente nos compartimentos adjacentes ao incendiado otimiza a ventilação, acarretando em maior dissipação da fumaça do local incendiado."
                 ],
                 correct: 3,
-                explanation: "A alternativa incorreta é a quarta, pois durante a aplicação da VPP mecânica, manter abertas as passagens nos compartimentos adjacentes não otimiza a ventilação, podendo comprometer a eficiência do sistema.",
+                explanation: "A alternativa D está incorreta conforme o MABOM de Combate a Incêndio Urbano.",
                 difficulty: "hard",
                 category: "Profissional"
             },
@@ -1247,7 +1268,7 @@
                     "Chave de tampão de hidrante, chave de registro de hidrante, martelo de borracha, coletor e mangueira de 1 ½\"."
                 ],
                 correct: 0,
-                explanation: "A alternativa correta é a primeira, pois esses são os equipamentos necessários para abastecer o reservatório da viatura após uma ocorrência de combate a incêndio.",
+                explanation: "A alternativa A está correta com os equipamentos necessários para abastecimento da viatura.",
                 difficulty: "medium",
                 category: "Profissional"
             },
@@ -1261,7 +1282,7 @@
                     "A sequência ideal de ações dos primeiros bombeiros que chegam para combater um incêndio consiste em dimensionar a cena, localizar o foco, identificar e controlar o fluxo de fumaça, resfriar o interior, extinguir o incêndio, realizar salvamentos e salvatagem."
                 ],
                 correct: 1,
-                explanation: "A alternativa incorreta é a segunda, pois a marcação em 'X' não é o padrão FEMA para buscas em operações de combate a incêndio.",
+                explanation: "A alternativa B está incorreta conforme o MABOM de Combate a Incêndio Urbano.",
                 difficulty: "medium",
                 category: "Profissional"
             },
@@ -1275,7 +1296,7 @@
                     "A Regra dos 10% recomenda que um cabo aéreo tencionado e com uma carga de 90kgf pendurada nele deve ter uma catenária de 10% da distância entre as ancoragens. Já a Regra dos 15° preconiza que o ângulo entre a corda tencionada e uma linha imaginária no plano horizontal não pode ser superior a 15°."
                 ],
                 correct: 3,
-                explanation: "A alternativa correta é a quarta, pois descreve corretamente a Regra dos 10% e a Regra dos 15° para verificação da tensão em cabos aéreos.",
+                explanation: "A alternativa D está correta com a descrição adequada das Regras dos 10% e 15°.",
                 difficulty: "hard",
                 category: "Profissional"
             },
@@ -1289,7 +1310,7 @@
                     "Salvamento com equipamento: ocorre a ação necessária de dois guarda-vidas no resgate da vítima, com a utilização de equipamentos de proteção individual, de flutuação, de tração ou de propulsão."
                 ],
                 correct: 1,
-                explanation: "A alternativa correta é a segunda, pois descreve adequadamente as características do salvamento com embarcação, incluindo os cuidados necessários.",
+                explanation: "A alternativa B está correta sobre salvamento com embarcação.",
                 difficulty: "medium",
                 category: "Profissional"
             },
@@ -1303,7 +1324,7 @@
                     "As áreas comuns de condomínios horizontais, destinadas a guaritas, centros comerciais, clubes sociais, salões de festas e assemelhados deverão se regularizar e/ou possuir medidas de segurança conforme os demais critérios de área, altura e ocupação."
                 ],
                 correct: 2,
-                explanation: "A alternativa incorreta é a terceira, pois áreas com painéis fotovoltaicos instalados diretamente sobre o solo, mesmo em fazendas solares, não necessariamente exigem medidas de segurança contra incêndio adicionais.",
+                explanation: "A alternativa C está incorreta sobre medidas de segurança para painéis fotovoltaicos.",
                 difficulty: "medium",
                 category: "Profissional"
             },
@@ -1317,7 +1338,7 @@
                     "As casas de bombas quando estiverem em compartimento enterrado ou em barriletes, deverão possuir acesso no mínimo através de escadas do tipo marinheiro, sendo que o barrilete deve possuir no mínimo 1,5 m de pé direito."
                 ],
                 correct: 1,
-                explanation: "A alternativa incorreta é a segunda, pois não se recomenda a instalação de bombas de incêndio com pressões superiores a 100 mca, conforme estabelecido na IT 17.",
+                explanation: "A alternativa B está incorreta, pois não se recomenda pressões superiores a 100 mca.",
                 difficulty: "hard",
                 category: "Profissional"
             },
@@ -1331,7 +1352,7 @@
                     "A aprovação do PSCIP e a emissão do AVCB significa o reconhecimento da legitimidade dos direitos de posse ou domínio, bem como a regularidade do uso da edificação sobressaindo-se a regularização junto a outros órgãos."
                 ],
                 correct: 2,
-                explanation: "A alternativa correta é a terceira, pois as medidas de segurança contra incêndio devem ser projetadas e executadas por profissionais habilitados, conforme estabelecido na Declaração de Direitos de Liberdade Econômica.",
+                explanation: "A alternativa C está correta conforme a Declaração de Direitos de Liberdade Econômica.",
                 difficulty: "medium",
                 category: "Profissional"
             },
@@ -1345,13 +1366,13 @@
                     "Na falta de simbologia apropriada, tanto na IT 03, quanto nas NBRs, poderá ser criada, pelo Responsável Técnico (RT), simbologia referente ao equipamento ou sistema projetado, observando-se critérios de simplicidade e facilidade de leitura e identificação, devendo os símbolos criados serem relacionado no quadro de legenda, com a devida descrição."
                 ],
                 correct: 2,
-                explanation: "A alternativa incorreta é a terceira, pois a representação em planta baixa e corte não deve ser feita com formas geométricas complexas com o propósito de ocupar maior memória no arquivo.",
-                difficulty: "medium",
+                explanation: "A alternativa C está incorreta, pois não se deve usar formas geométricas complexas para ocupar mais memória.",
+                difficulty: "hard",
                 category: "Profissional"
             },
             {
                 id: 38,
-                question: "Sobre o licenciamento de edificações junto ao CBMMG, marque a alternativa que contemple a sequência CORRETA quanto aos termos e definições utilizadas nos documentos da corporação.",
+                question: "Sobre o licenciamento de edificações junto ao CBMMG, marque a alternativa que contemple a sequência CORRETA quanto aos termos e definições utilizadas nos documentos da corporação. I - É o documento eletronicamente emitido às empresas, edificações ou espaços destinados ao uso coletivo classificados como nível de risco I... II - É o documento eletronicamente emitido, por meio de procedimento declaratório junto à Redesim-MG, às empresas, edificações ou espaços destinados ao uso coletivo classificados como nível de risco II... III - É a documentação emitida pelo Corpo de Bombeiros Militar de Minas Gerais antes de 01jan2006 certificando que a edificação atendia aos parâmetros de segurança contra incêndio e pânico definidos pelo CBMMG. IV - É o documento emitido pelo CBMMG certificando que a edificação possui as condições de segurança contra incêndio e pânico previstas na legislação e estabelecendo um período de revalidação.",
                 options: [
                     "Declaração de Dispensa de Licenciamento; Certificado de Licenciamento Provisório; Carta de liberação; Auto de Vistoria do Corpo de Bombeiros – AVCB.",
                     "Certificado de Licenciamento Provisório; Auto de Vistoria do Corpo de Bombeiros – AVCB; Declaração de Dispensa de Licenciamento; Carta de liberação.",
@@ -1359,7 +1380,7 @@
                     "Carta de liberação; Certificado de Licenciamento Provisório; Auto de Vistoria do Corpo de Bombeiros – AVCB; Declaração de Dispensa de Licenciamento."
                 ],
                 correct: 0,
-                explanation: "A alternativa correta é a primeira, pois apresenta a sequência correta dos documentos de licenciamento do CBMMG: Declaração de Dispensa de Licenciamento; Certificado de Licenciamento Provisório; Carta de liberação; Auto de Vistoria do Corpo de Bombeiros – AVCB.",
+                explanation: "A sequência correta é: Declaração de Dispensa de Licenciamento; Certificado de Licenciamento Provisório; Carta de liberação; AVCB.",
                 difficulty: "hard",
                 category: "Profissional"
             },
@@ -1373,7 +1394,7 @@
                     "Na falta de simbologia apropriada, tanto na IT 03, quanto nas NBRs, poderá ser criada, pelo Responsável Técnico (RT), simbologia referente ao equipamento ou sistema projetado, observando-se critérios de simplicidade e facilidade de leitura e identificação, devendo os símbolos criados serem relacionado no quadro de legenda, com a devida descrição."
                 ],
                 correct: 2,
-                explanation: "A alternativa incorreta é a terceira, pois o número de saídas de emergência depende sim do dimensionamento pelo cálculo da população e das distâncias a serem percorridas.",
+                explanation: "A alternativa C está incorreta, pois o número de saídas de emergência depende do dimensionamento pela população e distâncias.",
                 difficulty: "medium",
                 category: "Profissional"
             },
@@ -1384,12 +1405,13 @@
                     "Estacionamento de veículos, área de manobras ou carga e descarga, venda de ingressos, estruturas provisórias destinadas à acomodação de público, postos médicos e postos de informação devem ser localizados no mínimo a 5 metros das entradas e saídas do evento.",
                     "Evento em via pública ou em locais sem delimitação por barreiras, com acesso franco, deverá dispor de escape em pelo menos duas direções distintas.",
                     "As rotas de saída de veículos de emergência devem permanecer desobstruídas.",
-                    "As arenas destinadas às apresentações musicais localizadas no interior de grandes áreas de eventos, como o caso dos parques de exposição, devem, quando não for realizado o controle interno de migração de público, possuir, individualmente, dimensões suficientes para comportar 20% do"
+                    "As arenas destinadas às apresentações musicais localizadas no interior de grandes áreas de eventos, como o caso dos parques de exposição, devem, quando não for realizado o controle interno de migração de público, possuir, individualmente, dimensões suficientes para comportar 20% do público total do evento."
                 ],
-                correct: 3,
-                explanation: "A alternativa incorreta é a quarta, pois está incompleta e não representa um critério mínimo para o licenciamento de Blocos de Carnaval.",
-                difficulty: "medium",
-                category: "Profissional"
+                correct: null, // QUESTÃO ANULADA
+                explanation: "Esta questão foi anulada no gabarito oficial.",
+                difficulty: "annulled",
+                category: "Profissional",
+                annulled: true
             }
         ];
 
@@ -1450,65 +1472,100 @@
             quizProgress.style.width = `${progressPercentage}%`;
             
             // Criar HTML da pergunta
-            let questionHTML = `
-                <div class="question">
-                    <div class="question-header">
-                        <span class="question-difficulty difficulty-${question.difficulty}">
-                            ${question.category} - ${question.difficulty === 'easy' ? 'Fácil' : question.difficulty === 'medium' ? 'Médio' : 'Difícil'}
-                        </span>
-                        <div class="question-text">${question.id}. ${question.question}</div>
-                    </div>
-                    <div class="options">
-            `;
+            let questionHTML = '';
             
-            // Adicionar opções de resposta
-            question.options.forEach((option, optionIndex) => {
-                let optionClass = 'option';
-                let feedbackIcon = '';
-                
-                // Verificar se esta opção foi selecionada
-                if (userAnswers[index] === optionIndex) {
-                    optionClass += ' selected';
-                    
-                    // Verificar se a resposta está correta
-                    if (optionIndex === question.correct) {
-                        optionClass += ' correct';
-                        feedbackIcon = '<i class="fas fa-check feedback-icon"></i>';
-                    } else {
-                        optionClass += ' incorrect';
-                        feedbackIcon = '<i class="fas fa-times feedback-icon"></i>';
-                    }
-                }
-                
-                // Se a pergunta foi respondida, destacar a resposta correta
-                if (userAnswers[index] !== null && optionIndex === question.correct) {
-                    optionClass += ' correct-answer';
-                    if (userAnswers[index] !== optionIndex) {
-                        feedbackIcon = '<i class="fas fa-check feedback-icon"></i>';
-                    }
-                }
-                
-                questionHTML += `
-                    <div class="${optionClass}" data-option="${optionIndex}">
-                        <span class="option-letter">${String.fromCharCode(65 + optionIndex)}</span>
-                        ${option}
-                        ${feedbackIcon}
-                    </div>
+            if (question.annulled) {
+                questionHTML = `
+                    <div class="question annulled">
+                        <div class="question-header">
+                            <span class="annulled-badge">
+                                <i class="fas fa-ban"></i> QUESTÃO ANULADA
+                            </span>
+                            <span class="question-difficulty difficulty-annulled">
+                                ${question.category} - Anulada
+                            </span>
+                            <div class="question-text">${question.id}. ${question.question}</div>
+                        </div>
+                        <div class="options">
                 `;
-            });
+                
+                // Para questões anuladas, todas as alternativas são marcadas como corretas
+                question.options.forEach((option, optionIndex) => {
+                    questionHTML += `
+                        <div class="option correct-answer">
+                            <span class="option-letter">${String.fromCharCode(65 + optionIndex)}</span>
+                            ${option}
+                            <i class="fas fa-check feedback-icon"></i>
+                        </div>
+                    `;
+                });
+            } else {
+                questionHTML = `
+                    <div class="question">
+                        <div class="question-header">
+                            <span class="question-difficulty difficulty-${question.difficulty}">
+                                ${question.category} - ${question.difficulty === 'easy' ? 'Fácil' : question.difficulty === 'medium' ? 'Médio' : 'Difícil'}
+                            </span>
+                            <div class="question-text">${question.id}. ${question.question}</div>
+                        </div>
+                        <div class="options">
+                `;
+                
+                // Adicionar opções de resposta
+                question.options.forEach((option, optionIndex) => {
+                    let optionClass = 'option';
+                    let feedbackIcon = '';
+                    
+                    // Verificar se esta opção foi selecionada
+                    if (userAnswers[index] === optionIndex) {
+                        optionClass += ' selected';
+                        
+                        // Verificar se a resposta está correta
+                        if (optionIndex === question.correct) {
+                            optionClass += ' correct';
+                            feedbackIcon = '<i class="fas fa-check feedback-icon"></i>';
+                        } else {
+                            optionClass += ' incorrect';
+                            feedbackIcon = '<i class="fas fa-times feedback-icon"></i>';
+                        }
+                    }
+                    
+                    // Se a pergunta foi respondida, destacar a resposta correta
+                    if (userAnswers[index] !== null && optionIndex === question.correct) {
+                        optionClass += ' correct-answer';
+                        if (userAnswers[index] !== optionIndex) {
+                            feedbackIcon = '<i class="fas fa-check feedback-icon"></i>';
+                        }
+                    }
+                    
+                    questionHTML += `
+                        <div class="${optionClass}" data-option="${optionIndex}">
+                            <span class="option-letter">${String.fromCharCode(65 + optionIndex)}</span>
+                            ${option}
+                            ${feedbackIcon}
+                        </div>
+                    `;
+                });
+            }
             
             questionHTML += `</div></div>`;
             
             // Inserir HTML no container
             quizContainer.innerHTML = questionHTML;
             
-            // Adicionar event listeners às opções (apenas se a pergunta ainda não foi respondida)
-            if (userAnswers[index] === null) {
+            // Para questões não anuladas, adicionar event listeners às opções
+            if (!question.annulled && userAnswers[index] === null) {
                 document.querySelectorAll('.option').forEach(option => {
                     option.addEventListener('click', function() {
                         selectOption(this, index);
                     });
                 });
+            }
+            
+            // Para questões anuladas, marcar automaticamente como respondida
+            if (question.annulled && userAnswers[index] === null) {
+                userAnswers[index] = 0; // Marcar como respondida
+                correctAnswers[index] = true; // Considerar correta
             }
             
             // Atualizar estado dos botões de navegação
@@ -1576,15 +1633,18 @@
         }
 
         function finishQuiz() {
-            // Calcular pontuação
-            const correctCount = correctAnswers.filter(correct => correct).length;
-            const totalQuestions = allQuestions.length;
-            const scorePercentage = Math.round((correctCount / totalQuestions) * 100);
+            // Calcular pontuação (questões anuladas não contam)
+            const validQuestions = allQuestions.filter(q => !q.annulled);
+            const validQuestionIndices = allQuestions.map((q, i) => q.annulled ? null : i).filter(i => i !== null);
+            
+            const correctCount = validQuestionIndices.filter(i => correctAnswers[i]).length;
+            const totalValidQuestions = validQuestions.length;
+            const scorePercentage = totalValidQuestions > 0 ? Math.round((correctCount / totalValidQuestions) * 100) : 0;
             
             // Calcular desempenho por categoria
-            const legisQuestions = allQuestions.filter(q => q.category === 'Legislação');
-            const juridQuestions = allQuestions.filter(q => q.category === 'Jurídico');
-            const profQuestions = allQuestions.filter(q => q.category === 'Profissional');
+            const legisQuestions = allQuestions.filter(q => q.category === 'Legislação' && !q.annulled);
+            const juridQuestions = allQuestions.filter(q => q.category === 'Jurídico' && !q.annulled);
+            const profQuestions = allQuestions.filter(q => q.category === 'Profissional' && !q.annulled);
             
             const correctLegis = legisQuestions.filter((q, i) => {
                 const globalIndex = allQuestions.findIndex(aq => aq.id === q.id);
@@ -1602,7 +1662,7 @@
             }).length;
             
             // Exibir resultados
-            scoreElement.textContent = `${correctCount}/${totalQuestions}`;
+            scoreElement.textContent = `${correctCount}/${totalValidQuestions}`;
             correctLegislacaoElement.textContent = `${correctLegis}/${legisQuestions.length}`;
             correctJuridicoElement.textContent = `${correctJurid}/${juridQuestions.length}`;
             correctProfissionalElement.textContent = `${correctProf}/${profQuestions.length}`;
